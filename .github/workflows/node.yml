@@ -17,4 +17,10 @@ jobs:
       - name: npm run build
         run: npm run build
       - name: npm run coverage
-        run: npm run coverage | tail -n +7 >> $GITHUB_STEP_SUMMARY
+        # run: npm run coverage | tail -n +17 >> $GITHUB_STEP_SUMMARY
+        run: npm run coverage
+      - name: "Report Coverage"
+        # Set if: always() to also generate the report if tests are failing
+        # Only works if you set `reportOnFailure: true` in your vite config as specified above
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
