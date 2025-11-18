@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: pnpm install
-        run: pnpm install --frozen-lockfile
-      - name: pnpm build
-        run: pnpm build
-      - name: pnpm coverage
-        run: pnpm coverage | tail -n +7 >> $GITHUB_STEP_SUMMARY
+      - name: npm install
+        run: npm install --frozen-lockfile
+      - name: npm run build
+        run: npm run build
+      - name: npm run coverage
+        run: npm run coverage | tail -n +7 >> $GITHUB_STEP_SUMMARY
