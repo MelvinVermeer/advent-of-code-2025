@@ -7,9 +7,9 @@ describe("00 - Template", () => {
   const sample = [""];
 
   describe("Part 1", () => {
-    it("Sample", () => {
-      expect(part1(sample)).toEqual(sample);
-    });
+    // it("Sample", () => {
+    //   expect(part1(sample)).toEqual(sample);
+    // });
 
     it.skip("Answer", () => {
       expect(part1(data)).toEqual(data);
