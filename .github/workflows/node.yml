@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: bun install
-        run: bun install --frozen-lockfile
-      - name: bun build
-        run: bun build
-      - name: bun coverage
-        run: bun coverage | tail -n +7 >> $GITHUB_STEP_SUMMARY
+      - name: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: pnpm build
+        run: pnpm build
+      - name: pnpm coverage
+        run: pnpm coverage | tail -n +7 >> $GITHUB_STEP_SUMMARY
